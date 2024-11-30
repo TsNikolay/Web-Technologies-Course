@@ -1,0 +1,256 @@
+/* --------------------------------
+   Import Fonts
+-------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap");
+
+/* --------------------------------
+   Global Styles
+-------------------------------- */
+body {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  box-sizing: border-box; /* Ensures padding and border are included in element width/height */
+}
+
+/* --------------------------------
+   Navbar
+-------------------------------- */
+.custom-navbar {
+  background-color: rgba(54, 18, 10, 0.8);
+  width: 100%;
+  z-index: 11; /* Ensures the navbar stays above other elements */
+}
+
+.custom-motto {
+  font-family: "Charmonman", cursive;
+  font-weight: 200;
+  font-size: 36px;
+  font-style: normal;
+  color: white;
+  padding-right: 50px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 950px) {
+  .custom-navbar {
+    justify-content: center;
+  }
+
+  .custom-motto {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+/* --------------------------------
+   Background
+-------------------------------- */
+.background {
+  width: 100%;
+  position: relative; /* Creates stacking context for z-index to work */
+  z-index: 10; /* Places the background below the navbar */
+  transform: translateZ(0); /* Fixes potential rendering issues by creating a new stacking context */
+}
+
+/* --------------------------------
+   Titles and Buttons
+-------------------------------- */
+.custom-title {
+  font-family: "Newsreader", serif;
+}
+
+.btn {
+  font-family: "Newsreader", serif;
+  width: 100%;
+  background-color: rgba(54, 18, 10, 0.9);
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgba(54, 18, 10, 0.7);
+}
+
+/* --------------------------------
+   Cards
+-------------------------------- */
+.card {
+  background-color: rgba(242, 247, 245, 0.803);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card h5 {
+  font-family: "Newsreader", serif;
+}
+
+/* --------------------------------
+   Shopping List Icon
+-------------------------------- */
+.shopping-list-icon-container {
+  position: fixed; /* Keeps the icon in a fixed position on the screen */
+  right: 20px;
+  top: 20px;
+  z-index: 5; /* Ensures it appears above most elements */
+  align-items: center;
+  gap: 10px;
+}
+
+.shopping-list-icon {
+  width: 75px;
+  fill: rgba(127, 127, 127, 0.2); /* Fills the SVG */
+  color: rgba(54, 18, 10, 0.8); /*  Сolor for SVG stroke*/
+  cursor: pointer; /* Changes the cursor to indicate interactivity */
+}
+
+.shopping-list-counter {
+  position: absolute; /* Positions the counter relative to the container */
+  top: 52px;
+  right: 5px;
+  border-radius: 50%; /* Makes the badge a perfect circle */
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: crimson;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* --------------------------------
+   Shopping List Container
+-------------------------------- */
+.shopping-list-container {
+  width: 400px;
+  background-color: rgba(41, 32, 32, 0.95);
+  color: white;
+  position: fixed; /* Fixed position on the screen */
+  top: 0;
+  right: -400px; /* Initially hidden off-screen to the right */
+  bottom: 0; /* Spans to the bottom of the screen */
+  z-index: 12; /* Ensures it appears above most elements */
+  display: grid; /* Grid layout for structured sections */
+  grid-template-rows: 70px 1fr 70px; /* Divides the container into 3 parts */
+  transition: 0.5s; /* Smooth slide-in/out effect */
+}
+
+.shopping-list-container h1 {
+  font-weight: 200;
+  text-align: center;
+  background-color: rgb(35, 34, 32);
+}
+
+.shopping-list-buttons {
+  display: grid; /* Enables grid layout for the buttons */
+  grid-template-columns: repeat(2, 1fr); /* Divides the container into 2 equal-width columns */
+}
+
+.checkOutButton {
+  background-color: rgb(200, 202, 109);
+  border: none;
+  font-weight: 600;
+}
+
+.closeButton {
+  background-color: bisque;
+  border: none;
+}
+
+/* --------------------------------
+   Shopping List Items
+-------------------------------- */
+.shopping-list-item-image img {
+  width: 100%;
+}
+
+.shopping-list-item {
+  display: grid; /* Enables grid layout for the shopping list item */
+  grid-template-columns: 70px 150px 50px 1fr; /* Defines four columns with specific widths */
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.shopping-list-item-buttons span {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.minus,
+.plus {
+  background-color: azure;
+  border-radius: 25px;
+  color: black;
+  transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transition effect for background and text color changes */
+  cursor: pointer;
+  user-select: none; /* Prevents text selection when clicking the buttons */
+}
+
+.plus:hover {
+  /* Applies styles when the user hovers over the .plus button */
+  background-color: rgb(101, 39, 39);
+  color: rgb(255, 255, 255);
+}
+
+.shopping-list {
+  overflow: auto;
+}
+
+.shopping-list h2 {
+  font-weight: 200;
+}
+
+/* --------------------------------
+   Scrollbar Styles
+-------------------------------- */
+/* Customizes the scrollbar appearance for the .shopping-list element */
+.shopping-list::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* Styles the track (background area) of the scrollbar */
+.shopping-list::-webkit-scrollbar-track {
+  background-color: rgb(35, 34, 32);
+  border-radius: 6px;
+}
+
+/* Styles the draggable thumb (scroll handle) on the scrollbar */
+.shopping-list::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+  border: 2px solid #3b1616;
+}
+
+/* --------------------------------
+   Total Price Container
+-------------------------------- */
+.total-price-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(35, 34, 32);
+}
+
+.total-price-container h3 {
+  font-weight: 200;
+}
+
+/* --------------------------------
+   Alerts
+-------------------------------- */
+.alert {
+  position: fixed; /* Ensures the alert stays visible in a fixed position */
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Ensures the alert is perfectly centered */
+  z-index: 15; /* Places it above all other content */
+  background-color: #fff3cd;
+  color: #856404;
+}
