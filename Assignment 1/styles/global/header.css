@@ -1,0 +1,51 @@
+header{
+    display: flex;
+    justify-content: center  ;
+    background-color: #333; 
+    height: 75px;  
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;  
+    width: 75%;  
+}
+
+nav a {
+    position: relative; /* Enables the use of ::after pseudo-element positioned relative to this element */
+    text-decoration: none;
+    color: white; 
+    padding: 5px;
+    font-size: 18px;
+}
+  
+nav a::after { /* Creates an ::after pseudo-element for each <a> link in the navigation */
+    content: ''; /* Empty content to create an underline effect */
+    position: absolute; /* Positions the underline absolutely within the anchor */
+    width: 0; /* Initially sets the underline width to zero for animation */
+    height: 2px; 
+    background-color: #ffffff; 
+    left: 50%; /* Centers the underline horizontally */
+    bottom: 0; /* Positions the underline at the bottom of the anchor */
+    transform: translateX(-50%); /* Offsets by 50% to center the line perfectly */
+    transition: width 0.3s ease; /* Smoothly animates the width of the underline on hover */
+}
+  
+nav a:hover::after { /* Defines the style of the ::after pseudo-element when hovering over the link */
+    width: 100%; /* Expands the underline to full width on hover */
+}
+  
+@media(max-width: 550px){ /* Media query to apply styles for screens with a width of 550px or less */
+    nav{
+        flex-wrap: wrap; /* Allows items to wrap to a new line if they don’t fit in one row */
+        justify-content: center;
+    }
+    
+    nav a {
+        font-size: 14px;
+    }
+}
+
+

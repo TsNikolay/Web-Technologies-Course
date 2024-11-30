@@ -1,0 +1,63 @@
+.about-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .about-content-box{
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap; /* Allows items to wrap to a new line if they don’t fit in one row */
+    width: 100%;
+    margin-top: 30px;
+ }
+
+ .about-card{
+    min-height: 220px;
+    width: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    margin: 10px 20px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.2) /* Adds a shadow effect to the card */
+ }
+
+ .about-card h1{
+   text-align: center;
+ }
+
+ .about-card p{
+    width: 85%;
+    text-align: justify; /* Justifies text for clean alignment */
+ }
+
+.about-img{
+    width: 80%;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+@media(max-width: 800px){ /* Media query to apply styles for screens with a width of 800px or less */
+ 
+     .about-wrapper h1{
+        font-size: 24px;
+     }
+
+     .about-wrapper p{
+        font-size: 12px;
+     }
+
+     .about-card{
+        width: 80%;
+     }
+}
+
+@media(max-width: 400px){ /* Media query to apply styles for screens with a width of 400px or less */
+    .about-wrapper h1{
+        font-size: 14px;
+     }
+}

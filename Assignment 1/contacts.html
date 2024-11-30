@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsaryk Mykola. Assignment 1</title>
+    <link rel="stylesheet" href="styles/global/header.css">
+    <link rel="stylesheet" href="styles/global/global.css">
+    <link rel="stylesheet" href="styles/global/footer.css">
+    <link rel="stylesheet" href="styles/contacts.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About me</a>
+            <a href="./CV.html">CV</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./contacts.html">Contacts</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="form-header">Contact Me</h1>
+        <div class="form-container">
+            <!-- Background image for the form -->
+            <img class="form-image" src="images/contacts/formBackground.png" alt="">
+            <form class="form-content">
+                <!-- Field for Name -->
+                <div class="form-field">
+                    <!-- Label associated with the Name input field via the "for" attribute -->
+                    <label for="name">Name:</label>
+                    <!-- Input field for the user's name -->
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                </div>
+
+                 <!-- Field for Email -->
+                <div class="form-field">
+                    <!-- Label associated with the Email input field -->
+                    <label for="email">Email:</label>
+                    <!-- Input field for the user's email address, requires a valid email format -->
+                    <input type="email" id="email" name="email" placeholder="Your email">
+                </div>
+                
+                <!-- Field for Message -->
+                <div class="form-field">
+                    <!-- Label associated with the Message text area field -->
+                    <label for="message">Message:</label>
+                    <!-- Text area input for the user's message, allows multiple lines -->
+                    <textarea id="message" name="message" rows="1" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Tsaryk Mykola | All Rights Reserved</p>
+        </div>
+      </footer>
+      
+</body>
+</html>

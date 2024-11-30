@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap'); /* Imports "Just Another Hand" font from Google Fonts */
+
+.form-container{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-image{
+    width: 500px;
+    position: absolute; /* Positions the image absolutely within its container */
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  
+}
+
+.form-header{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 400px;
+    z-index: 5; /* Ensures this element appears above other overlapping elements */
+    background-color: rgba(255, 255, 255, 0.2); /* Белый цвет с прозрачностью 70% */  
+    max-width: 500px; 
+    font-family: Arial, sans-serif; /* Основной шрифт */
+}
+
+.form-field{
+    display: flex;
+    margin-top:10px;
+    
+}
+
+.form-field label{
+    font-size: 24px;
+}
+
+.form-field input{
+    font-family: "Just Another Hand", cursive;
+    font-size: 36px;
+    font-weight: 200;
+    margin-left: 10px;
+    background-color: transparent; /* Transparent background for input */
+    border: none;
+    height: 50px;
+    width: 300px;  
+}
+
+.form-field textarea{
+    font-family: "Just Another Hand", cursive;
+    font-size: 36px;
+    font-weight: 200;
+    margin-left: 10px;
+    background-color: transparent; /* Transparent background for textarea */
+    border: none;
+    width: 200px;
+    height: 80px;
+    resize: none; /* Disables resizing */
+    margin-top: 0px
+}
+
+.form-content button{
+    width: 300px;
+    height: 35px;
+    background: rgba(122, 122, 122, 0.2);
+    border: none;
+    border-radius: 5px;
+    margin-top: 25px;
+    font-size: 24px;
+    
+}
+
+.form-content button:hover{ /* Styles applied to the button when the mouse hovers over it */
+    background: rgba(122, 122, 122, 0.5);
+    transition: ease-in-out 0.3s; /* Smooth transition effect for background change on hover */
+}
+
+
+@media(max-width: 550px){ /* Media query to adjust styles for screens 550px wide or less */
+    .form-image{
+        width: 300px;       
+    }
+
+    .form-content {
+        width: 300px;
+    }
+
+    .form-field label{
+        font-size: 16px;
+    }
+
+    .form-field input{   
+        font-size: 24px;
+        margin-left: 10px;
+        height: 20px;
+        width: 180px;  
+    }
+    
+    .form-field textarea{
+        font-size: 24px; 
+        height: 50px;  
+        width: 150px;
+    }
+
+    .form-content button{
+        width: 250px;
+        height: 25px;
+        margin-top: 9px;
+        font-size: 12px;
+    }
+}

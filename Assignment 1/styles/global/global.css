@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap');
+/* Imports the Poppins font from Google Fonts with different weights */
+
+*{
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box; /* Sets box-sizing to border-box to include padding and border in element width and height */
+}
+
+
+body {
+    background: linear-gradient(to top left, rgba(188, 188, 172, 0.86), rgb(255, 255, 255)); /* Applies a gradient background color going from grayish to white */
+    display: flex; /* Enables flexbox layout on the body, which helps control vertical alignment of its children */
+    flex-direction: column; /* Stacks child elements (e.g., header, main, footer) vertically */    
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    
+}
+
+main {
+    flex: 1; /* Allows the main section to grow and fill available space in the column layout */
+}
+

@@ -1,0 +1,124 @@
+.cv-download {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.cv-button {
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    max-width: 200px;   
+    text-align: center;
+    font-size: 18px;
+    background: linear-gradient(to left, #646764, #333); /* Creates a gradient background for the button */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s; /* Smooth transition for background color on hover */    
+}
+
+
+.cv-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+
+.cv-sidebar {
+    width: 30%;
+    padding: 20px;
+    background-color: #f2e9e4;
+}
+
+.cv-profile-photo {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.cv-contact-info p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.cv-section h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #d27d2d;
+    border-bottom: 1px solid #d27d2d;
+    padding-bottom: 5px;
+}
+
+.cv-section ul {
+    list-style-type: none; /* Removes bullet points from the list */
+    padding: 0;
+}
+
+.cv-section ul li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+
+.cv-main-content {
+    width: 70%;
+    padding: 40px;
+}
+
+.cv-main-content h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.cv-main-content h2 {
+    font-size: 18px;
+    color: #d27d2d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cv-intro {
+    font-size: 16px;
+    margin-top: 20px;
+    color: #555;
+    line-height: 1.5; /* Sets line spacing for better readability */
+}
+
+.cv-section {
+    margin-top: 30px;
+}
+
+.cv-section p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4; /* Sets line spacing for better readability */
+}
+
+.cv-section strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+@media(max-width: 620px){ /* Media query to adjust styles for screens 620px wide or less */
+    .cv-contact-info p {
+        font-size: 10px;
+        margin: 0px 0;
+    }
+
+    .cv-sidebar {
+        width: 40%;
+        padding: 20px;     
+    }
+
+}

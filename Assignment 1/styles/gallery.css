@@ -1,0 +1,33 @@
+.gallery-container{
+    display: flex;
+    justify-content:center ;
+    margin: 20px ;
+}
+
+.gallery-column{
+    display: flex;
+    flex-direction: column;   
+    margin:  0 10px;
+    width: 33%;   
+}
+
+.gallery-photo img{
+     width: 100%;
+     border-radius: 25px;
+     margin: 5px;
+}
+
+.gallery-header{
+    margin-top: 20px;
+    text-align: center;  
+}
+
+@media(max-width: 550px) { /* Media query to adjust styles for screens 550px wide or less */
+    .gallery-photo img{
+        border-radius: 10px; 
+    }
+
+    .gallery-column{
+        margin: 0 5px;
+    }
+}
