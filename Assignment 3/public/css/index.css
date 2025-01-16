@@ -1,0 +1,46 @@
+.team-header {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.5em;
+
+}
+
+.team-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 300px;
+}
+
+.team-member {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.button-link {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 0;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #0056b3;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
